@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=1">
+<link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
 <!--
@@ -41,7 +41,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
 <main>
   <section class="hero" aria-labelledby="hero-h">
-    <img class="hero__img" src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=2200&q=78" alt="Sala konferencyjna kancelarii z betonowym sufitem i oknami na zieleń" fetchpriority="high">
+    <img class="hero__img" src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=2200&q=78" alt="Biblioteka prawnicza z regałami oprawionych tomów" fetchpriority="high">
     <div class="hero__in">
       <h1 id="hero-h">Prowadzimy sprawę od pierwszego pisma do prawomocnego wyroku.</h1>
       <p class="hero__lead">Kancelaria adwokacko-radcowska w&nbsp;Poznaniu. Doradzamy firmom i&nbsp;osobom prywatnym w&nbsp;sprawach gospodarczych, nieruchomości, spadków i&nbsp;prawa pracy.</p>
@@ -53,7 +53,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <div class="hero__strip" aria-label="Dziś w kancelarii">
       <div class="hero__strip-in">
         <p><span>Dziś</span><b data-today>—</b></p>
-        <p><span>Konsultacje</span><b>9:00–17:00</b></p>
+        <p><span>Kancelaria</span><b data-open>pon.–pt. 9:00–17:00</b></p>
         <p><span>Odpowiedź</span><b>w 24 h roboczych</b></p>
         <p><span>Adres</span><b>ul. Ratajczaka 19, Poznań</b></p>
       </div>
@@ -75,7 +75,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       <div class="steps__intro">
         <h2 id="przebieg-h">Jak prowadzimy sprawę</h2>
         <p>Wiesz, co dzieje się na każdym etapie i&nbsp;ile to kosztuje, zanim cokolwiek podpiszesz.</p>
-        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1100&q=72" alt="Podpisywanie dokumentów przy biurku" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1423592707957-3b212afa6733?auto=format&fit=crop&w=1100&q=72" alt="Oprawione księgi i notes z piórem na biurku" loading="lazy">
       </div>
       <ol class="steps__list">
         <li>
@@ -104,44 +104,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
         <h2 id="zespol-h">Zespół</h2>
         <p class="team__key"><span class="robe robe--adw"></span>adwokat <span class="robe robe--rp"></span>radca prawny <small>Kolor odpowiada żabotowi togi.</small></p>
       </div>
-      <div class="team__list">
-        <article class="person">
-          <p class="person__ini robe-bg--adw" aria-hidden="true">MW</p>
-          <div class="person__body">
-            <h3>Marta Wierzbicka</h3>
-            <p class="person__role"><span class="robe robe--adw"></span>adwokat, partnerka</p>
-            <p>Spory gospodarcze i&nbsp;prawo spółek. Prowadzi sprawy przed sądami gospodarczymi i&nbsp;arbitrażowymi.</p>
-            <p class="person__lang">polski · angielski · niemiecki</p>
-          </div>
-        </article>
-        <article class="person">
-          <p class="person__ini robe-bg--rp" aria-hidden="true">TK</p>
-          <div class="person__body">
-            <h3>Tomasz Kalinowski</h3>
-            <p class="person__role"><span class="robe robe--rp"></span>radca prawny, partner</p>
-            <p>Nieruchomości, umowy deweloperskie i&nbsp;proces budowlany. Doradza przy transakcjach i&nbsp;sporach z&nbsp;wykonawcami.</p>
-            <p class="person__lang">polski · angielski</p>
-          </div>
-        </article>
-        <article class="person">
-          <p class="person__ini robe-bg--adw" aria-hidden="true">JN</p>
-          <div class="person__body">
-            <h3>Joanna Nowicka</h3>
-            <p class="person__role"><span class="robe robe--adw"></span>adwokat</p>
-            <p>Spadki, rozwody i&nbsp;podział majątku. Mediatorka wpisana na listę stałych mediatorów.</p>
-            <p class="person__lang">polski · francuski</p>
-          </div>
-        </article>
-        <article class="person">
-          <p class="person__ini robe-bg--rp" aria-hidden="true">PB</p>
-          <div class="person__body">
-            <h3>Paweł Brzeziński</h3>
-            <p class="person__role"><span class="robe robe--rp"></span>radca prawny</p>
-            <p>Prawo pracy po stronie pracodawców i&nbsp;pracowników. Odwołania od wypowiedzeń i&nbsp;sprawy o&nbsp;mobbing.</p>
-            <p class="person__lang">polski · angielski</p>
-          </div>
-        </article>
-      </div>
+      <div class="roster" role="table" aria-label="Zespół kancelarii"><div class="roster__row roster__row--head" role="row"><span role="columnheader">Imię i nazwisko</span><span role="columnheader">Repertorium</span><span role="columnheader">Prowadzi sprawy</span><span role="columnheader">Języki</span></div><div class="roster__row" role="row"><div role="cell"><h3>Marta Wierzbicka</h3><p class="person__role"><span class="robe robe--adw"></span>adwokat, partnerka</p></div><b role="cell" class="roster__rep">GC · K</b><p role="cell">Spory gospodarcze, prawo spółek, obrona w sprawach karnych gospodarczych</p><p role="cell" class="roster__lang">PL · EN · DE</p></div><div class="roster__row" role="row"><div role="cell"><h3>Tomasz Kalinowski</h3><p class="person__role"><span class="robe robe--rp"></span>radca prawny, partner</p></div><b role="cell" class="roster__rep">C</b><p role="cell">Nieruchomości, umowy deweloperskie, proces budowlany</p><p role="cell" class="roster__lang">PL · EN</p></div><div class="roster__row" role="row"><div role="cell"><h3>Joanna Nowicka</h3><p class="person__role"><span class="robe robe--adw"></span>adwokat, mediatorka</p></div><b role="cell" class="roster__rep">Ns · RC</b><p role="cell">Spadki, rozwody, podział majątku, mediacje</p><p role="cell" class="roster__lang">PL · FR</p></div><div class="roster__row" role="row"><div role="cell"><h3>Paweł Brzeziński</h3><p class="person__role"><span class="robe robe--rp"></span>radca prawny</p></div><b role="cell" class="roster__rep">P</b><p role="cell">Prawo pracy: wypowiedzenia, mobbing, wynagrodzenia</p><p role="cell" class="roster__lang">PL · EN</p></div></div>
     </div>
   </section>
 
@@ -149,11 +112,11 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <div class="wrap fees__grid">
       <h2 id="honoraria-h">Honoraria</h2>
       <div class="fees__rows">
-        <div class="fees__row"><h3>Ryczałt za sprawę</h3><p>Stała kwota za całość albo za etap, na przykład za pozew i&nbsp;pierwszą instancję. Najczęstsza forma przy sprawach spadkowych i&nbsp;pracowniczych.</p></div>
-        <div class="fees__row"><h3>Stawka godzinowa</h3><p>Rozliczenie według rzeczywistego czasu pracy, z&nbsp;miesięcznym zestawieniem czynności. Sprawdza się przy doradztwie dla firm.</p></div>
-        <div class="fees__row"><h3>Obsługa stała</h3><p>Miesięczny abonament dla przedsiębiorców: umowy, opinie i&nbsp;bieżące pytania w&nbsp;ustalonym limicie godzin.</p></div>
+        <div class="fees__row"><h3>Ryczałt za sprawę<small>od 2 500 zł netto*</small></h3><p>Stała kwota za całość albo za etap, na przykład za pozew i&nbsp;pierwszą instancję. Najczęstsza forma przy sprawach spadkowych i&nbsp;pracowniczych.</p></div>
+        <div class="fees__row"><h3>Stawka godzinowa<small>od 350 zł netto / h*</small></h3><p>Rozliczenie według rzeczywistego czasu pracy, z&nbsp;miesięcznym zestawieniem czynności. Sprawdza się przy doradztwie dla firm.</p></div>
+        <div class="fees__row"><h3>Obsługa stała<small>od 1 800 zł netto / mies.*</small></h3><p>Miesięczny abonament dla przedsiębiorców: umowy, opinie i&nbsp;bieżące pytania w&nbsp;ustalonym limicie godzin.</p></div>
       </div>
-      <p class="fees__note">Wysokość honorarium ustalamy po analizie dokumentów i&nbsp;zapisujemy w&nbsp;umowie. Nie obiecujemy wyniku sprawy, bo żaden prawnik nie może tego uczciwie zrobić.</p>
+      <p class="fees__note">Wysokość honorarium ustalamy po analizie dokumentów i&nbsp;zapisujemy w&nbsp;umowie. Nie obiecujemy wyniku sprawy, bo żaden prawnik nie może tego uczciwie zrobić.<small>* Kwoty przykładowe, kancelaria jest fikcyjna.</small></p>
     </div>
   </section>
 
@@ -162,7 +125,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       <h2 id="faq-h">Częste pytania</h2>
       <div class="faq__list">
         <details><summary>Czy pierwsza rozmowa jest płatna?</summary><p>Nie. Rozmowa wstępna trwa do 30 minut i&nbsp;służy temu, żeby ocenić, czy i&nbsp;jak możemy pomóc. Płatna jest dopiero analiza dokumentów, po akceptacji wyceny.</p></details>
-        <details><summary>Dostałem pismo z sądu. Ile mam czasu?</summary><p>To zależy od rodzaju pisma. Sprzeciw od nakazu zapłaty i&nbsp;apelację wnosi się w&nbsp;ciągu 14 dni od doręczenia, a&nbsp;termin na odpowiedź na pozew wyznacza sąd, zwykle nie krótszy niż 14 dni. Termin liczy się od dnia odbioru pisma, nie od daty na kopercie. Zaznacz w&nbsp;formularzu, że biegnie termin, a&nbsp;oddzwonimy tego samego dnia.</p></details>
+        <details><summary>Dostałem pismo z sądu. Ile mam czasu?</summary><p>To zależy od rodzaju pisma. Sprzeciw od nakazu zapłaty i&nbsp;apelację wnosi się w&nbsp;ciągu 14 dni od doręczenia, a&nbsp;termin na odpowiedź na pozew wyznacza sąd, zwykle nie krótszy niż 14 dni. Termin liczy się od dnia odbioru pisma, nie od daty na kopercie. Zaznacz w&nbsp;formularzu, że biegnie termin, a&nbsp;oddzwonimy w&nbsp;pierwszej kolejności, w&nbsp;dni robocze tego samego dnia.</p></details>
         <details><summary>Czy prowadzicie sprawy poza Poznaniem?</summary><p>Tak. Reprezentujemy klientów przed sądami w&nbsp;całej Polsce, a&nbsp;większość spotkań może odbyć się online.</p></details>
         <details><summary>Jakie dokumenty przygotować?</summary><p>Wszystko, co dotyczy sprawy: umowy, aneksy, korespondencję, pisma z&nbsp;sądu lub urzędu i&nbsp;notatki z&nbsp;datami. Lepiej przynieść za dużo niż za mało.</p></details>
         <details><summary>Czym różni się adwokat od radcy prawnego?</summary><p>Dla klienta różnica jest niewielka: obaj mogą reprezentować Cię w&nbsp;sprawach cywilnych, gospodarczych i&nbsp;pracowniczych, a&nbsp;od 2015 roku radca prawny może też być obrońcą w&nbsp;sprawach karnych. Różnią się samorządem zawodowym i&nbsp;tym, że radca może pracować na etacie.</p></details>
@@ -174,7 +137,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <div class="wrap contact__grid">
       <div class="contact__intro">
         <h2 id="kontakt-h">Opisz sprawę</h2>
-        <p>Odpowiadamy w&nbsp;ciągu 24 godzin roboczych. Jeśli w&nbsp;sprawie biegnie termin, zaznacz to, a&nbsp;oddzwonimy jeszcze dziś.</p>
+        <p>Odpowiadamy w&nbsp;ciągu 24 godzin roboczych. Jeśli w&nbsp;sprawie biegnie termin, zaznacz to, a&nbsp;oddzwonimy w&nbsp;pierwszej kolejności.</p>
         <dl class="contact__facts">
           <div><dt>Telefon</dt><dd><a href="tel:+48610000000">61 000 00 00</a></dd></div>
           <div><dt>E-mail</dt><dd>biuro@sygnatura.example</dd></div>
@@ -214,9 +177,8 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       </form>
 
       <div class="filed" data-filed hidden tabindex="-1">
-        <p class="filed__label">Sygnatura zgłoszenia</p>
-        <p class="filed__no" data-filed-no>—</p>
-        <h3>Zapytanie przyjęte</h3>
+        <h3 class="filed__no">Sygn. <span data-filed-no>—</span></h3>
+        <p class="filed__head">Zapytanie przyjęte</p>
         <p data-filed-text></p>
         <button class="btn btn--line" type="button" data-again>Wyślij kolejne</button>
       </div>
@@ -231,6 +193,6 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <p class="foot__demo">Projekt portfolio PBDesign. Kancelaria, osoby i&nbsp;dane kontaktowe są fikcyjne. Treść ma charakter informacyjny i&nbsp;nie stanowi porady prawnej.</p>
   </div>
 </footer>
-<script src="app.js?v=1"></script>
+<script src="app.js?v=2"></script>
 </body>
 </html>

@@ -37,6 +37,10 @@
   var DAYS = ['niedziela', 'poniedziałek', 'wtorek', 'środa', 'czwartek', 'piątek', 'sobota'];
   var MON = ['stycznia', 'lutego', 'marca', 'kwietnia', 'maja', 'czerwca', 'lipca', 'sierpnia', 'września', 'października', 'listopada', 'grudnia'];
   $('[data-today]').textContent = DAYS[d.getDay()] + ', ' + d.getDate() + ' ' + MON[d.getMonth()];
+  var wd = d.getDay(), hr = d.getHours();
+  var isOpen = wd > 0 && wd < 6 && hr >= 9 && hr < 17;
+  $('[data-open]').textContent = isOpen ? 'otwarta do 17:00' : (wd > 0 && wd < 6 && hr < 9 ? 'otwieramy o 9:00' : (wd === 5 || wd === 6 || wd === 0 || hr >= 17) && !(wd >= 1 && wd <= 4 && hr >= 17) ? 'nieczynna, wracamy w poniedziałek' : 'nieczynna, wracamy jutro o 9:00');
+  var nextCall = isOpen ? 'jeszcze dziś' : 'w najbliższy dzień roboczy do 10:00';
 
   /* ---------- wokanda ---------- */
   var list = $('#list');
@@ -129,11 +133,12 @@
     var btn = $('[data-submit]'); btn.disabled = true; btn.classList.add('is-loading'); btn.textContent = 'Wysyłanie';
     setTimeout(function () {
       var a = topic.value === 'x' ? null : AREAS[+topic.value];
-      var no = (a ? a.rep : 'Ogól') + ' ' + (100 + Math.floor(Math.random() * 800)) + '/' + String(new Date().getFullYear()).slice(2);
+      var dept = { GC: 'IX', C: 'I', Ns: 'I', RC: 'IV', P: 'VII', K: 'III' };
+      var no = (a ? dept[a.rep] + ' ' + a.rep : 'I Co') + ' ' + (100 + Math.floor(Math.random() * 800)) + '/' + String(new Date().getFullYear()).slice(2);
       var term = $('input[name="term"]:checked', form).value;
       $('[data-filed-no]').textContent = no;
       $('[data-filed-text]').textContent = (term === 'tak'
-        ? 'Biegnie termin, więc oddzwonimy jeszcze dziś na numer ' + form.phone.value + '.'
+        ? 'Biegnie termin, więc oddzwonimy ' + nextCall + ' na numer ' + form.phone.value + '.'
         : 'Odpowiemy w ciągu 24 godzin roboczych na adres ' + form.email.value + '.') +
         (a ? ' Sprawę z zakresu: ' + a.short.toLowerCase() + ' przejmie ' + a.who + '.' : '') +
         ' To strona demonstracyjna, więc nic nie zostało wysłane.';
