@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-11T14:30:00Z",
+  "title": "Design System: SYGNATURA",
+  "extensions": {
+    "colorMeta": {
+      "robe-green": { "role": "primary", "displayName": "Robe Green", "canonical": "#134a33", "tonalRamp": ["#06180f", "#0d3624", "#134a33", "#1b5e42", "#2f7c5a", "#5f9e80", "#a9c9b8", "#e3ece7"] },
+      "robe-green-deep": { "role": "primary", "displayName": "Deep Robe Green", "canonical": "#0d3624", "tonalRamp": ["#04130c", "#0d3624", "#134a33", "#1b5e42", "#2f7c5a", "#5f9e80", "#a9c9b8", "#e3ece7"] },
+      "robe-green-mist": { "role": "primary", "displayName": "Green Mist", "canonical": "#e3ece7", "tonalRamp": ["#0d3624", "#134a33", "#2f7c5a", "#5f9e80", "#a9c9b8", "#c4d8cd", "#e3ece7", "#f3f7f5"] },
+      "on-green-muted": { "role": "primary", "displayName": "On-Green Muted", "canonical": "#c4d8cd", "tonalRamp": ["#134a33", "#2f7c5a", "#5f9e80", "#8fb8a3", "#a9c9b8", "#c4d8cd", "#e3ece7", "#f3f7f5"] },
+      "robe-adwokat": { "role": "secondary", "displayName": "Adwokat Robe", "canonical": "#2f9e6a", "tonalRamp": ["#0c2a1c", "#154a33", "#1f6b4a", "#2f9e6a", "#55b88a", "#86cfab", "#bce5d0", "#e8f6ef"] },
+      "robe-radca": { "role": "secondary", "displayName": "Radca Robe", "canonical": "#3c78d8", "tonalRamp": ["#0d1d38", "#163261", "#1f4e9c", "#3c78d8", "#6496e2", "#93b6ec", "#c6d8f5", "#eaf1fc"] },
+      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "#14181b", "tonalRamp": ["#0b0d0f", "#14181b", "#2c3236", "#454d52", "#5f686d", "#8c9498", "#d9dedb", "#f0f1ef"] },
+      "ink-2": { "role": "neutral", "displayName": "Ink 2", "canonical": "#454d52", "tonalRamp": ["#14181b", "#2c3236", "#454d52", "#5f686d", "#7a8388", "#a2aaae", "#d9dedb", "#f0f1ef"] },
+      "ink-3": { "role": "neutral", "displayName": "Ink 3", "canonical": "#5f686d", "tonalRamp": ["#14181b", "#2c3236", "#454d52", "#5f686d", "#7a8388", "#a2aaae", "#d9dedb", "#f0f1ef"] },
+      "graphite": { "role": "neutral", "displayName": "Graphite", "canonical": "#16191b", "tonalRamp": ["#0e1113", "#16191b", "#2a2f32", "#454d52", "#6b7479", "#959ea2", "#c3c9cc", "#e7ebec"] },
+      "paper": { "role": "neutral", "displayName": "Paper", "canonical": "#ffffff", "tonalRamp": ["#16191b", "#454d52", "#7a8388", "#a2aaae", "#d9dedb", "#f0f1ef", "#f8f8f7", "#ffffff"] },
+      "stone": { "role": "neutral", "displayName": "Stone", "canonical": "#f0f1ef", "tonalRamp": ["#2a2c2a", "#4a4d4a", "#6e716e", "#959895", "#bcbfbc", "#d9dbd8", "#f0f1ef", "#f8f9f8"] },
+      "rule": { "role": "neutral", "displayName": "Rule", "canonical": "#d9dedb", "tonalRamp": ["#2a302d", "#4a524e", "#6b746f", "#8f9893", "#b4bcb8", "#d9dedb", "#ebeeec", "#f7f8f7"] },
+      "error-red": { "role": "error", "displayName": "Error Red", "canonical": "#b3261e", "tonalRamp": ["#3a0b08", "#661510", "#8f1e17", "#b3261e", "#d0554d", "#e38b85", "#f2c3c0", "#fbeceb"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headline only." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles (h2), balanced wrapping." },
+      "title": { "displayName": "Title", "purpose": "Row titles in ruled lists: names, steps, fee types." },
+      "reference": { "displayName": "Reference", "purpose": "Repertory letters, step numerals and the stamped case reference; 900 weight, usually robe green." },
+      "body": { "displayName": "Body", "purpose": "Reading text, 17px / 1.65, 16px under 640px." },
+      "label": { "displayName": "Label", "purpose": "Uppercase column headers of ruled lists and keys in key/value strips only." }
+    },
+    "shadows": [
+      { "name": "file-lift", "value": "0 30px 60px -40px rgba(20,24,27,.45)", "purpose": "The enquiry form and its filed confirmation only." },
+      { "name": "input-focus-halo", "value": "0 0 0 3px rgba(19,74,51,.18)", "purpose": "Text fields on focus, paired with a robe-green border." }
+    ],
+    "motion": [
+      { "name": "ease", "value": "cubic-bezier(.16,1,.3,1)", "purpose": "Default easing for all state transitions and expansions." },
+      { "name": "state-change", "value": "0.2s", "purpose": "Button and row background, colour and border transitions." },
+      { "name": "expand", "value": "0.45s", "purpose": "Cause-list entry body opening via grid-template-rows 0fr to 1fr." },
+      { "name": "stamp", "value": "0.6s", "purpose": "Case reference number entering from scale 1.25 and opacity 0." }
+    ],
+    "breakpoints": [
+      { "name": "mobile", "value": "640px" },
+      { "name": "tablet", "value": "900px" },
+      { "name": "narrow-desktop", "value": "1100px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Robe-green square button for the main action: header CTA and form submit.",
+      "html": "<button class=\"ds-btn ds-btn-green\">Wyślij zapytanie</button>",
+      "css": ".ds-btn { display:inline-flex; align-items:center; justify-content:center; min-height:54px; padding:0 26px; border:2px solid transparent; border-radius:0; font:700 16px/1 'Schibsted Grotesk', system-ui, sans-serif; cursor:pointer; transition:background-color .2s cubic-bezier(.16,1,.3,1), color .2s cubic-bezier(.16,1,.3,1), border-color .2s cubic-bezier(.16,1,.3,1); } .ds-btn-green { background:var(--green, #134a33); color:#fff; } .ds-btn-green:hover { background:var(--green-2, #0d3624); } .ds-btn-green:focus-visible { outline:3px solid var(--green, #134a33); outline-offset:3px; }"
+    },
+    {
+      "name": "White Button",
+      "kind": "button",
+      "refersTo": "button-white",
+      "description": "Paper button for actions placed on graphite or green grounds.",
+      "html": "<div style=\"background:#134a33;padding:24px\"><button class=\"ds-btn-white\">Opisz sprawę</button></div>",
+      "css": ".ds-btn-white { display:inline-flex; align-items:center; min-height:54px; padding:0 26px; border:2px solid transparent; border-radius:0; background:#fff; color:#14181b; font:700 16px/1 'Schibsted Grotesk', system-ui, sans-serif; cursor:pointer; transition:background-color .2s cubic-bezier(.16,1,.3,1); } .ds-btn-white:hover { background:#e3ece7; } .ds-btn-white:focus-visible { outline:3px solid #fff; outline-offset:3px; }"
+    },
+    {
+      "name": "Line Button",
+      "kind": "button",
+      "refersTo": "button-line",
+      "description": "Ink-outlined secondary action on paper; fills ink on hover.",
+      "html": "<button class=\"ds-btn-line\">Wyślij kolejne</button>",
+      "css": ".ds-btn-line { display:inline-flex; align-items:center; min-height:54px; padding:0 26px; border:2px solid #14181b; border-radius:0; background:transparent; color:#14181b; font:700 16px/1 'Schibsted Grotesk', system-ui, sans-serif; cursor:pointer; transition:background-color .2s cubic-bezier(.16,1,.3,1), color .2s cubic-bezier(.16,1,.3,1); } .ds-btn-line:hover { background:#14181b; color:#fff; } .ds-btn-line:focus-visible { outline:3px solid #134a33; outline-offset:3px; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Square 54px field with a bold label above; green border and halo on focus.",
+      "html": "<label class=\"ds-field\"><span>Telefon</span><input type=\"tel\" placeholder=\"61 000 00 00\"></label>",
+      "css": ".ds-field { display:grid; gap:6px; font-family:'Schibsted Grotesk', system-ui, sans-serif; } .ds-field span { font-weight:700; font-size:15px; color:#14181b; } .ds-field input { min-height:54px; padding:12px 14px; border:2px solid #d9dedb; border-radius:0; background:#fff; font:400 16px/1.5 'Schibsted Grotesk', system-ui, sans-serif; color:#14181b; } .ds-field input:hover { border-color:#5f686d; } .ds-field input:focus { outline:none; border-color:#134a33; box-shadow:0 0 0 3px rgba(19,74,51,.18); } .ds-field input::placeholder { color:#646c71; }"
+    },
+    {
+      "name": "Topic Chip",
+      "kind": "chip",
+      "refersTo": "topic-chip-selected",
+      "description": "Square selectable tile with a green repertory code; fills robe green when chosen.",
+      "html": "<div class=\"ds-topics\"><label class=\"ds-topic\"><input type=\"radio\" name=\"t\" checked><span><b>GC</b>Prawo gospodarcze</span></label><label class=\"ds-topic\"><input type=\"radio\" name=\"t\"><span><b>Ns</b>Spadki</span></label></div>",
+      "css": ".ds-topics { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; font-family:'Schibsted Grotesk', system-ui, sans-serif; } .ds-topic { position:relative; cursor:pointer; } .ds-topic input { position:absolute; opacity:0; inset:0; margin:0; cursor:pointer; } .ds-topic span { display:flex; align-items:center; gap:12px; min-height:54px; padding:10px 14px; border:2px solid #d9dedb; font-weight:600; font-size:15.5px; color:#14181b; transition:border-color .15s, background-color .15s, color .15s; } .ds-topic b { min-width:30px; font-weight:900; font-size:17px; color:#134a33; } .ds-topic:hover span { border-color:#5f686d; } .ds-topic input:checked + span { background:#134a33; border-color:#134a33; color:#fff; } .ds-topic input:checked + span b { color:#fff; } .ds-topic input:focus-visible + span { outline:3px solid #14181b; outline-offset:2px; }"
+    },
+    {
+      "name": "Segmented Control",
+      "kind": "custom",
+      "description": "Three square cells in an ink frame; checked cell fills ink.",
+      "html": "<div class=\"ds-seg\"><label><input type=\"radio\" name=\"s\" checked><span>Nie</span></label><label><input type=\"radio\" name=\"s\"><span>Tak</span></label><label><input type=\"radio\" name=\"s\"><span>Nie wiem</span></label></div>",
+      "css": ".ds-seg { display:grid; grid-template-columns:repeat(3,1fr); border:2px solid #14181b; max-width:420px; font-family:'Schibsted Grotesk', system-ui, sans-serif; } .ds-seg label { position:relative; cursor:pointer; } .ds-seg input { position:absolute; opacity:0; inset:0; margin:0; cursor:pointer; } .ds-seg span { display:grid; place-items:center; min-height:48px; font-weight:700; font-size:15px; color:#14181b; transition:background-color .15s, color .15s; } .ds-seg label + label span { border-left:2px solid #14181b; } .ds-seg input:checked + span { background:#14181b; color:#fff; } .ds-seg input:focus-visible + span { outline:3px solid #14181b; outline-offset:-5px; }"
+    },
+    {
+      "name": "Header Navigation",
+      "kind": "nav",
+      "description": "Solid white sticky bar: square green logo mark, underline-on-hover links, phone, green CTA.",
+      "html": "<header class=\"ds-top\"><a class=\"ds-logo\" href=\"#\"><span class=\"ds-logo-mark\">S</span><span class=\"ds-logo-txt\"><b>SYGNATURA</b><small>adwokaci i radcowie prawni</small></span></a><nav class=\"ds-nav\"><a href=\"#\">Specjalizacje</a><a href=\"#\">Przebieg</a><a href=\"#\">Zespół</a></nav><a class=\"ds-top-cta\" href=\"#\">Opisz sprawę</a></header>",
+      "css": ".ds-top { display:flex; align-items:center; gap:28px; height:76px; padding:0 24px; background:#fff; border-bottom:1px solid #d9dedb; font-family:'Schibsted Grotesk', system-ui, sans-serif; color:#14181b; } .ds-logo { display:flex; align-items:center; gap:12px; text-decoration:none; color:inherit; } .ds-logo-mark { width:42px; height:42px; display:grid; place-items:center; background:#134a33; color:#fff; font-weight:900; font-size:24px; } .ds-logo-txt { display:flex; flex-direction:column; line-height:1.1; } .ds-logo-txt b { font-weight:900; font-size:21px; letter-spacing:.06em; } .ds-logo-txt small { font-size:12.5px; color:#5f686d; } .ds-nav { display:flex; gap:26px; margin-left:auto; } .ds-nav a { font-weight:600; font-size:15.5px; text-decoration:none; color:inherit; padding:6px 0; border-bottom:2px solid transparent; } .ds-nav a:hover { border-color:#134a33; } .ds-nav a:focus-visible, .ds-top-cta:focus-visible { outline:3px solid #134a33; outline-offset:3px; } .ds-top-cta { display:inline-flex; align-items:center; min-height:46px; padding:0 20px; background:#134a33; color:#fff; font-weight:700; font-size:15px; text-decoration:none; } .ds-top-cta:hover { background:#0d3624; }"
+    },
+    {
+      "name": "Cause List Entry",
+      "kind": "custom",
+      "description": "Signature wokanda row on the green field: repertory letters, area, cases, lawyer with robe swatch, square toggle.",
+      "html": "<div class=\"ds-list\"><div class=\"ds-row ds-row-head\"><span>Repertorium</span><span>Obszar</span><span>Typowe sprawy</span><span>Prowadzi</span><span></span></div><button class=\"ds-row ds-entry\" type=\"button\"><span class=\"ds-rep\">GC</span><span class=\"ds-name\">Prawo gospodarcze i spółki</span><span class=\"ds-cases\">spory z kontrahentami, windykacja, umowy handlowe</span><span class=\"ds-who\"><i class=\"ds-robe\"></i>M. Wierzbicka</span><span class=\"ds-icon\"></span></button></div>",
+      "css": ".ds-list { background:#134a33; color:#fff; padding:24px; border-top:3px solid #fff; font-family:'Schibsted Grotesk', system-ui, sans-serif; } .ds-row { display:grid; grid-template-columns:96px minmax(0,1.15fr) minmax(0,1.7fr) 170px 40px; gap:20px; align-items:center; width:100%; text-align:left; } .ds-row-head { padding:12px 0; font-size:12.5px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:#c4d8cd; border-bottom:1px solid rgba(255,255,255,.35); } .ds-entry { min-height:84px; padding:14px 0; background:none; border:0; border-bottom:1px solid rgba(255,255,255,.25); color:#fff; font:inherit; cursor:pointer; transition:background-color .2s; } .ds-entry:hover { background:rgba(255,255,255,.06); } .ds-entry:focus-visible { outline:3px solid #fff; outline-offset:3px; } .ds-rep { font-weight:900; font-size:34px; letter-spacing:-.02em; line-height:1; } .ds-name { font-weight:800; font-size:20px; line-height:1.2; } .ds-cases { color:#c4d8cd; font-size:15.5px; line-height:1.45; } .ds-who { display:flex; align-items:center; gap:8px; font-weight:600; font-size:15px; } .ds-robe { display:inline-block; width:12px; height:12px; border:2px solid #fff; background:#2f9e6a; } .ds-icon { position:relative; width:28px; height:28px; border:2px solid #fff; justify-self:end; } .ds-icon::before, .ds-icon::after { content:''; position:absolute; left:50%; top:50%; width:12px; height:2px; background:#fff; transform:translate(-50%,-50%); } .ds-icon::after { transform:translate(-50%,-50%) rotate(90deg); }"
+    },
+    {
+      "name": "Filed Document",
+      "kind": "card",
+      "description": "The only lifted surface: form / confirmation with 6px green top edge and stamped case reference.",
+      "html": "<div class=\"ds-file\"><h3 class=\"ds-file-no\">Sygn. GC 214/26</h3><p class=\"ds-file-head\">Zapytanie przyjęte</p><p>Oddzwonimy jeszcze dziś.</p></div>",
+      "css": ".ds-file { display:grid; gap:22px; justify-items:start; background:#fff; padding:40px; border-top:6px solid #134a33; box-shadow:0 30px 60px -40px rgba(20,24,27,.45); font-family:'Schibsted Grotesk', system-ui, sans-serif; color:#454d52; } .ds-file-no { margin:0; font-weight:900; font-size:56px; line-height:1; letter-spacing:-.02em; color:#134a33; animation:ds-stamp .6s cubic-bezier(.16,1,.3,1); } .ds-file-head { margin:0; font-weight:800; font-size:22px; color:#14181b; } .ds-file p { margin:0; } @keyframes ds-stamp { from { transform:scale(1.25); opacity:0; } } @media (prefers-reduced-motion: reduce) { .ds-file-no { animation:none; } }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Cause List",
+    "overview": "SYGNATURA is a law firm set out the way a court posts its wokanda: ruled columns, fixed column headers, each matter filed under its repertory letters (GC, C, Ns, RC, P, K). The visual system is the register itself. Information sits in rows separated by hairline rules and opened by a heavy top rule; nothing floats in a card when it can sit in a row. The enquiry form is a file, and a submitted enquiry receives its own case reference (\"Sygn.\") stamped in large green numerals.\n\nThe palette is a committed field of advocate-robe green against graphite and paper white. Green is not an accent sprinkled on white: whole sections (the cause list, the hero strip) are green, and graphite carries the hero, fees and footer. Type is one family, Schibsted Grotesk, worked hard at weight 800 to 900 for headings and repertory marks and left at 400 for reading text. Corners are square everywhere. There are no ornaments, no gavel imagery, no navy-and-gold.\n\nThe density is that of a well-kept register: calm, exact, easy to scan on a phone by someone who is stressed. Imagery is restrained to real legal interiors (bound volumes, a library), darkened under a left-weighted graphite scrim so text sits on the dark side.",
+    "keyCharacteristics": [
+      "Ruled-list layout: heavy 3px top rule, 1px hairlines between rows, uppercase column headers.",
+      "Robe green as a full-bleed section field, not a highlight.",
+      "One grotesque family, heavy (800/900) headings and reference marks, regular body.",
+      "Square corners on every surface, control and swatch.",
+      "Repertory letters and step numerals as the dominant typographic marks.",
+      "Alternating section grounds: graphite, green, paper, stone."
+    ],
+    "rules": [
+      { "name": "The Committed Field Rule", "body": "Robe green is used as whole sections and bands, not as small decorative touches. A page in this system has at least one full-bleed green field.", "section": "colors" },
+      { "name": "The Robe Legend Rule", "body": "The two robe swatches only ever appear as 12px square markers next to a lawyer's name or in the key that explains them.", "section": "colors" },
+      { "name": "The Weight Not Family Rule", "body": "Hierarchy comes from weight (400 vs. 800/900) and size inside one family. Do not add a serif or a second display face.", "section": "typography" },
+      { "name": "The Column Header Rule", "body": "Uppercase tracked labels belong to the header row of a ruled list or the key of a key/value pair. They do not sit above section headlines.", "section": "typography" },
+      { "name": "The Ruled Not Raised Rule", "body": "Separate content with a 3px top rule and 1px hairlines. Shadows are reserved for the filed document.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do open every list with a 3px rule and separate rows with 1px hairlines (rule colour on light grounds, white at 20 to 35% on dark).",
+      "Do give at least one section a full-bleed robe green field and set its secondary text in on-green muted.",
+      "Do keep every corner square, including inputs, chips and images.",
+      "Do use 800/900 Schibsted Grotesk for headings, repertory letters and numerals, 400 for body at 17px / 1.65.",
+      "Do keep controls at 54px minimum height with 2px borders.",
+      "Do switch focus outlines to white on graphite and green grounds (3px outline, 3px offset).",
+      "Do honour prefers-reduced-motion by collapsing animations and transitions."
+    ],
+    "donts": [
+      "Don't introduce rounded corners or pill shapes.",
+      "Don't add a serif or second display family.",
+      "Don't use navy-and-gold, brass, gavels, scales or icon-tile grids.",
+      "Don't wrap content in floating shadowed cards; shadows belong to the filed document only.",
+      "Don't put uppercase tracked labels above section headlines.",
+      "Don't use the robe swatch colours for anything but profession markers."
+    ]
+  }
+}
